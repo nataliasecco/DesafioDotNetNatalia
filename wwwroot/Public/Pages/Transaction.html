@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Transações</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.25/i18n/Portuguese-Brasil.json"></script>
+    <script src="/Public/Libs/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/Public/Stylesheets/Transaction.css" />
+</head>
+<body>
+
+    <!--Modal-->
+    <div class="modal" id="detailsModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Informações da transação</p>
+            </header>
+            <section class="modal-card-body">
+                <div class="control">
+                    <label class="label">Tipo de transação</label>
+                    <input class="input is-rounded" type="text" id="transaction_type_input" readonly placeholder="Digite apenas as opções válidas: 1, 2, 3 ou 4">
+                    <br />
+                    <label class="label">Data da ocorrência</label>
+                    <input class="input is-rounded" type="date" id="transaction_date_input">
+                    <br />
+                    <label class="label">Valor</label>
+                    <input class="input is-rounded" type="text" id="amount_input" readonly placeholder="Valor da transação">
+                    <br />
+                    <label class="label">CPF</label>
+                    <input class="input is-rounded" type="text" id="cpf_input" readonly placeholder="Digitar apenas números." maxlength="11">
+                    <br />
+                    <label class="label">Cartão</label>
+                    <input class="input is-rounded" type="text" id="card_number_input" readonly placeholder="Digite apenas números" maxlength="16">
+                    <br />
+                    <label class="label">Dono da loja</label>
+                    <input class="input is-rounded" type="text" readonly id="store_owner_input">
+                    <br />
+                    <label class="label">Nome da loja</label>
+                    <input class="input is-rounded" type="text" readonly id="store_name_input">
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success is-outlined is-rounded" id="saveTransaction">Salvar</button>
+                <button class="button is-success is-outlined is-rounded" id="closeModal">Fechar</button>
+                <button class="button is-danger is-outlined is-rounded" id="deleteTransaction">Excluir</button>
+            </footer>
+        </div>
+    </div>
+    <!--endModal-->
+
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/home">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="/upload">
+                        Carregar Arquivos
+                    </a>
+                    <a class="navbar-item" href="/transactions">
+                        Transações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br />
+    <div class="table-container">
+        <table id="transactionsTable" class="display">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br />
+        <button class="button is-success is-outlined is-rounded" id="registerTransaction">Cadastrar nova transação</button>
+    </div>
+    <footer>
+        <script src="/Public/Javascripts/Transaction.js" type="module"></script>
+    </footer>
+</body>
+</html>

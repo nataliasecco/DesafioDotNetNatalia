@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Public/Stylesheets/Upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/home">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="/upload">
+                        Carregar Arquivos
+                    </a>
+                    <a class="navbar-item" href="/transactions">
+                        Transações
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Selecione um arquivo CNAB (.txt)
+                </p>
+            </header>
+            <div class="card-image">
+                <figure class="image is-1by1">
+                    <img src="/Public/Images/upload_v2.png">
+                </figure>
+            </div>
+
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="file has-name">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="resume" id="fileInput">
+                            <span class="file-cta">
+                                <span class="file-label">
+                                    Selecione o arquivo.
+                                </span>
+                            </span>
+                            <span class="file-name" id="fileNameUploaded">
+                                Nenhum arquivo foi selecionado!
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card-buttons">
+                    <button class="button is-success is-outlined is-rounded" id="saveFile">Enviar</button>
+                    <button class="button is-danger is-outlined is-rounded" id="cancellFileUpload">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script src="/Public/Javascripts/Upload.js" type="module"></script>
+    </footer>
+</body>
+</html>
