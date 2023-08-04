@@ -11,12 +11,12 @@ Este projeto é uma aplicação web que possibilita o upload de arquivos no form
 
 # Tecnologias utilizadas no desenvolvimento do projeto
 
-- Aplicação construída utilizando requisições HTTP para facilitar a comunicação.
-- Ambiente de desenvolvimento: Microsoft Visual Studio 2022 IDE.
-- Backend desenvolvido em ASP.NET Core (C#).
-- Frontend desenvolvido usando HTML, CSS e JavaScript, com o framework CSS Bulma e o plugin DataTable do jQuery para estilização e apresentação dos dados.
-- Biblioteca MongoDB.Driver para C# utilizada para conectar a aplicação a uma instância local do banco de dados MongoDB.
-- Postman utilizado para testar a API.
+- Aplicação construída utilizando requisições HTTP.
+- Ambiente de desenvolvimento: Microsoft Visual Studio 2022.
+- O Backend foi desenvolvido em ASP.NET Core com a linguagem (C#).
+- Frontend desenvolvido usando HTML, CSS e JavaScript, com o framework "materialize" e o plugin DataTable do jQuery para melhoria e apresentação em tela dos dados.
+- Biblioteca MongoDB.Driver para linguagem C# utilizada para conectar a aplicação a uma instância local do banco de dados MongoDB.
+- Postman utilizado para fazer a requisição.
 
 # Requisitos para o funcionamento do projeto
 
@@ -25,17 +25,16 @@ Caso não tenha instalado, você pode acessar o link: (https://www.mongodb.com/t
 - (Opcional) Duas opções para se conectar a uma base de dados local usando o MongoDB: através do shell do MongoDB ou através do Compass, uma interface gráfica para o MongoDB. Links abaixo:
     Mongo Compass: (https://www.mongodb.com/pt-br/products/compass)
     Mongo Shell: (https://www.mongodb.com/try/download/community)
-- É necessário ter o .NET e o SDK do .NET instalados, na versão 6.0 ou mais recente.
+- É necessário ter o .NET e o SDK do .NET instalados, a partir da versão 6.0.
 
 # Como iniciar a aplicação
 
-- Faça o clone deste repositório para uma pasta local.
-- Com o .NET instalado, abra o terminal do Windows ou Linux e navegue até a pasta onde o repositório foi clonado.
-- Execute o comando "dotnet build" seguido por "dotnet run". O terminal imprimirá mensagens de execução conforme mostrado abaixo:
+- Faça o clone deste repositório.
+- Abra a Solution (.sln) em seu visual studio e execute o projeto.
 
 # Rota "Carregamento"
 
-Nesta rota, o usuário pode fazer o upload de arquivos no formato CNAB para salvar suas transações no banco de dados.
+Nesta rota, o usuário pode fazer o upload de arquivos no formato CNAB(.txt) para salvar suas transações no banco de dados.
 
 # Rota "Transações"
 
@@ -45,8 +44,8 @@ Nesta rota, estão disponíveis as seguintes funcionalidades:
 
 - **Botão Cadastrar Nova Transação**: Permite cadastrar uma nova transação individualmente, sem a necessidade de fazer o upload de um arquivo.
 
-- **Funcionalidades de Filtro na Tabela**: A tabela de transações oferece recursos de filtragem, incluindo:
-    - Ordenação Crescente e Decrescente: Permite ordenar as transações em ordem crescente ou decrescente.
+- **Funcionalidades de Filtro na Tabela**: A grid de transações oferece recursos de filtragem, incluindo:
+    - Tem a funcionalidade de ordenação Crescente e Decrescente: Permite ordenar as transações em ordem crescente ou decrescente.
     - Pesquisa: Permite filtrar as transações com base em informações como nome, valor, CPF, entre outros.
     - Paginação: A tabela é paginada, facilitando a navegação entre as transações.
     - Quantidade de Elementos por Página: O usuário pode definir a quantidade de elementos a serem exibidos por página.
