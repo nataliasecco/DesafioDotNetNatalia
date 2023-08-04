@@ -13,7 +13,7 @@ Este projeto é uma aplicação web que possibilita o upload de arquivos no form
 
 - Aplicação construída utilizando requisições HTTP.
 - Ambiente de desenvolvimento: Microsoft Visual Studio 2022.
-- O Backend foi desenvolvido em ASP.NET Core com a linguagem (C#).
+- O Back-end foi desenvolvido em ASP.NET Core com a linguagem (C#).
 - Frontend desenvolvido usando HTML, CSS e JavaScript, com o framework "materialize" e o plugin DataTable do jQuery para melhoria e apresentação em tela dos dados.
 - Biblioteca MongoDB.Driver para linguagem C# utilizada para conectar a aplicação a uma instância local do banco de dados MongoDB.
 - Postman utilizado para fazer a requisição.
